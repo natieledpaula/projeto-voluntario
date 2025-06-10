@@ -34,7 +34,7 @@ body {
 .titulo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #667eea;
+    color: #0432fd;
 }
 
 .navbar a {
@@ -49,5 +49,55 @@ body {
 }
 
 .navbar a:hover, .navbar a.active {
-    color: #667eea;
+    color: #224afd;
 }
+
+/* Sobre a pagina */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page {
+    display: none;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+    animation: fadeIn .5s ease-in;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.hero .titulo {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #0432fd, #69bcff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero .subtitulo {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
