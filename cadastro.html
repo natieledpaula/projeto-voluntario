@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntario</title>
+
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Links do css -->
+     <link rel="stylesheet" href="src/css/home.css">
+     <link rel="stylesheet" href="src/css/cadastro.css">
+</head>
+     <!-- Cabeçalho -->
+     <header class="cabecalho">
+        <nav class="navbar">
+            <h1 class="logo">Ações Voluntarias</h1>
+            <a href="index.html">Início</a>
+            <a href="#">Cadastro</a>
+            <a href="visualizar.html">Ver necessidades</a>
+        </nav>
+     </header>
+
+     <!-- Cadastro -->
+      <section id="cadastro" class="page">
+        <h2>Cadastrar Nova Necessidade</h2>
+        <div class="form-container">
+            <form id="necessidade">
+                <div class="form-group">
+                    <label for="nomeInstituicao">Nome da instituição</label>
+                    <input type="text" name="nomeInstituicao" id="nomeInstituicao" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tipoAjuda">Tipo de ajuda</label>
+                        <select name="tipoAjuda" id="tipoAjuda" required>
+                            <option value="">Selecione o tipo</option>
+                            <option value="Educação">Educação</option>
+                            <option value="Saúde">Saúde</option>
+                            <option value="Meio Ambiente">Meio Ambiente</option>
+                            <option value="Doação de alimentos">Doação de Alimentos</option>
+                            <option value="Doação de Roupas">Doação de Roupas</option>
+                            <option value="Assistência Social">Assistência Social</option>
+                            <option value="Cultura e Arte">Cultura e Arte</option>
+                            <option value="Esporte e Lazer">Esporte e Lazer</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" maxlength="9" required>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <label for="tituloNecessidade">Título da Necessidade</label>
+                        <input type="text" id="tituloNecessidade" name="tituloNecessidade" placeholder="Ex: Ajuda com reforço escolar" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição Detalhada</label>
+                        <textarea name="descricao" id="descricao" placeholder="Descreva detalhadamente a necessidade, horários, requisitos, etc." required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rua">Rua</label>
+                            <input type="text" id="rua" name="rua" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
+                        </div>
+                </div>
+                <button type="submit" class="btn">Cadastrar Necessidade</button>
+            </form>
+        </div>
+      </section>
+</body>
+</html>
