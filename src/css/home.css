@@ -31,7 +31,7 @@ body {
     padding: 0 2rem;
 }
 
-.titulo {
+.logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #0432fd;
@@ -83,7 +83,7 @@ body {
     padding: 3rem 0;
 }
 
-.hero .titulo {
+.hero h1 {
     font-size: 3rem;
     color: #333;
     margin-bottom: 1rem;
@@ -93,7 +93,7 @@ body {
     background-clip: text;
 }
 
-.hero .subtitulo {
+.hero p {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 2rem;
@@ -101,3 +101,21 @@ body {
     margin: 0 auto 2rem;
 }
 
+.parcerias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.parcerias-card {
+    background: linear-gradient(135deg, aliceblue, #69bcff);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(102, 126, 234, .2);
+}
+
+.parcerias-card h3 {
+    margin-bottom: 1rem;
+}
