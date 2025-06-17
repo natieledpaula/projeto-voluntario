@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voluntario</title>
 
-    <!-- link font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Links do css -->
-     <link rel="stylesheet" href="src/css/style.css">
-     <link rel="stylesheet" href="src/css/responsividade.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
+        <!-- Header -->
     <header>
         <nav>
             <a href="#" class="logo">VoluntaConnect</a>
@@ -25,9 +20,10 @@
         </nav>
     </header>
 
-      <!-- Home Page -->
-    <div id="home" class="page active">
-         <div class="hero">
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
                 <h1>VoluntaConnect</h1>
                 <p>Conectando organizações sociais com voluntários dispostos a fazer a diferença na comunidade. Uma plataforma simples e eficiente para transformar vidas.</p>
                 <a href="#" onclick="showPage('necessidades')" class="btn">Ver Oportunidades</a>
@@ -45,13 +41,135 @@
                 <div class="feature-card">
                     <h3>Impacto Social</h3>
                     <p>Juntos, criamos uma rede de solidariedade que fortalece nossa comunidade e promove transformações positivas na sociedade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cadastro Page -->
+        <div id="cadastro" class="page">
+            <h2>Cadastrar Nova Necessidade</h2>
+            <div class="form-container">
+                <form id="necessidadeForm">
+                    <div class="form-group">
+                        <label for="nomeInstituicao">Nome da Instituição *</label>
+                        <input type="text" id="nomeInstituicao" name="nomeInstituicao" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tipoAjuda">Tipo de Ajuda *</label>
+                            <select id="tipoAjuda" name="tipoAjuda" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="Educação">Educação</option>
+                                <option value="Saúde">Saúde</option>
+                                <option value="Meio Ambiente">Meio Ambiente</option>
+                                <option value="Doação de Alimentos">Doação de Alimentos</option>
+                                <option value="Doação de Roupas">Doação de Roupas</option>
+                                <option value="Assistência Social">Assistência Social</option>
+                                <option value="Cultura e Arte">Cultura e Arte</option>
+                                <option value="Esporte e Lazer">Esporte e Lazer</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cep">CEP *</label>
+                            <input type="text" id="cep" name="cep" maxlength="9" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tituloNecessidade">Título da Necessidade *</label>
+                        <input type="text" id="tituloNecessidade" name="tituloNecessidade" placeholder="Ex: Ajuda com reforço escolar" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição Detalhada *</label>
+                        <textarea id="descricao" name="descricao" placeholder="Descreva detalhadamente a necessidade, horários, requisitos, etc." required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rua">Rua</label>
+                            <input type="text" id="rua" name="rua" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" name="bairro" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Cadastrar Necessidade</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Necessidades Page -->
+        <div id="necessidades" class="page">
+            <h2>Oportunidades de Voluntariado</h2>
+            
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Pesquisar por título ou descrição...">
+                <select id="filterType">
+                    <option value="">Todos os tipos</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Meio Ambiente">Meio Ambiente</option>
+                    <option value="Doação de Alimentos">Doação de Alimentos</option>
+                    <option value="Doação de Roupas">Doação de Roupas</option>
+                    <option value="Assistência Social">Assistência Social</option>
+                    <option value="Cultura e Arte">Cultura e Arte</option>
+                    <option value="Esporte e Lazer">Esporte e Lazer</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+
+            <div id="needsContainer" class="needs-container">
+                <!-- Necessidades serão carregadas aqui dinamicamente -->
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                Nenhuma necessidade encontrada. Tente ajustar sua pesquisa ou filtros.
             </div>
         </div>
     </div>
 
-     <!-- Footer -->
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="#" onclick="showPage('home')">Início</a></li>
+            <li><a href="#" onclick="showPage('cadastro')">Cadastrar</a></li>
+            <li><a href="#" onclick="showPage('necessidades')">Ver Todas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 VoluntaConnect. Conectando corações e transformando vidas.</p>
     </footer>
+
+    <script src="src/js/script.js"></script>
 </body>
 </html>
