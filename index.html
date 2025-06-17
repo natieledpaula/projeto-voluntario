@@ -9,45 +9,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Links do css -->
-     <link rel="stylesheet" href="src/css/home.css">
-     <link rel="stylesheet" href="src/css/cadastro.css">
+     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <!-- Cabeçalho -->
-     <header class="cabecalho">
+    <header class="cabecalho">
         <nav class="navbar">
             <h1 class="logo">Ações Voluntarias</h1>
             <a href="#">Início</a>
             <a href="cadastro.html">Cadastro</a>
             <a href="visualizar.html">Ver necessidades</a>
         </nav>
-     </header>
+    </header>
+    
+      <!-- Home Page -->
+    <div id="home" class="page active">
+         <div class="hero">
+                <h1>VoluntaConnect</h1>
+                <p>Conectando organizações sociais com voluntários dispostos a fazer a diferença na comunidade. Uma plataforma simples e eficiente para transformar vidas.</p>
+                <a href="#" onclick="showPage('necessidades')" class="btn">Ver Oportunidades</a>
+            </div>
 
-     <!-- Sobre a pagina -->
-      <main class="container">
-        <div id="home" class="page active">
-            <div class="hero">
-                <h1 class="titulo">Voluntário</h1>
-                <p class="subtitulo">Conectando organizações sociais com voluntários dispostos a fazer a diferença na comunidade. Uma plataforma simples e eficientes para transformar vidas.</p>
-                <a href="visualizar.html" class="btn">Ver Oportunidade</a>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Para ONGs</h3>
+                    <p>Cadastre suas necessidades de forma simples e organizada. Encontre voluntários que compartilham da sua causa e amplie o impacto social da sua instituição.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Para Voluntários</h3>
+                    <p>Descubra oportunidades de voluntariado na sua região. Filtre por tipo de causa e encontre projetos que combinam com seu perfil e disponibilidade.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Impacto Social</h3>
+                    <p>Juntos, criamos uma rede de solidariedade que fortalece nossa comunidade e promove transformações positivas na sociedade.</p>
             </div>
         </div>
-
-         <!-- Parcerias -->
-         <div class="parcerias">
-            <div class="parcerias-card">
-                <h3 class="titulo">Para ONGs</h3>
-                <p class="subtitulo">Cadastre suas necessidades de forma simples e organizada. Encontre voluntários que compartilham da sua causa e amplie o impacto social da sua instituição.</p>
-            </div>
-            <div class="parcerias-card">
-                <h3 class="titulo">Para Voluntários</h3>
-                <p class="subtitulo">Descubra oportunidades de voluntariado na sua região. Filtre por tipo de causa e encontre projetos que combinam com seu perfil e disponibilidade.</p>
-            </div>
-            <div class="parcerias-card">
-                <h3 class="titulo">Impacto Voluntários</h3>
-                <p class="subtitulo">Juntos, criamos uma rede de solidariedade que fortalece nossa comunidade e promove transformações positivas na sociedade.</p>
-            </div>
-         </div>
-      </main>
+    </div>
 </body>
 </html>
