@@ -13,15 +13,17 @@
 </head>
 <body>
     <!-- Cabeçalho -->
-    <header class="cabecalho">
-        <nav class="navbar">
-            <h1 class="logo">Ações Voluntarias</h1>
-            <a href="#">Início</a>
-            <a href="cadastro.html">Cadastro</a>
-            <a href="visualizar.html">Ver necessidades</a>
+    <header>
+        <nav>
+            <a href="#" class="logo">VoluntaConnect</a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" class="active">Início</a></li>
+                <li><a href="#" onclick="showPage('cadastro')">Cadastrar Necessidade</a></li>
+                <li><a href="#" onclick="showPage('necessidades')">Ver Necessidades</a></li>
+            </ul>
         </nav>
     </header>
-    
+
       <!-- Home Page -->
     <div id="home" class="page active">
          <div class="hero">
@@ -45,5 +47,10 @@
             </div>
         </div>
     </div>
+
+     <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VoluntaConnect. Conectando corações e transformando vidas.</p>
+    </footer>
 </body>
 </html>

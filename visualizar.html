@@ -13,17 +13,57 @@
 </head>
 <body>
         <!-- Cabeçalho -->
-    <header class="cabecalho">
-        <nav class="navbar">
-            <h1 class="logo">Ações Voluntarias</h1>
-            <a href="#">Início</a>
-            <a href="cadastro.html">Cadastro</a>
-            <a href="visualizar.html">Ver necessidades</a>
+    <header>
+        <nav>
+            <a href="#" class="logo">VoluntaConnect</a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" class="active">Início</a></li>
+                <li><a href="#" onclick="showPage('cadastro')">Cadastrar Necessidade</a></li>
+                <li><a href="#" onclick="showPage('necessidades')">Ver Necessidades</a></li>
+            </ul>
         </nav>
     </header>
+     <div id="necessidades" class="page">
+            <h2>Oportunidades de Voluntariado</h2>
+            
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Pesquisar por título ou descrição...">
+                <select id="filterType">
+                    <option value="">Todos os tipos</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Meio Ambiente">Meio Ambiente</option>
+                    <option value="Doação de Alimentos">Doação de Alimentos</option>
+                    <option value="Doação de Roupas">Doação de Roupas</option>
+                    <option value="Assistência Social">Assistência Social</option>
+                    <option value="Cultura e Arte">Cultura e Arte</option>
+                    <option value="Esporte e Lazer">Esporte e Lazer</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
 
-    <main id="necessidade" class="page">
-        <h2>Oportunidades de Voluntariado</h2>
-    </main>
+            <div id="needsContainer" class="needs-container">
+                <!-- Necessidades serão carregadas aqui dinamicamente -->
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                Nenhuma necessidade encontrada. Tente ajustar sua pesquisa ou filtros.
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="#" onclick="showPage('home')">Início</a></li>
+            <li><a href="#" onclick="showPage('cadastro')">Cadastrar</a></li>
+            <li><a href="#" onclick="showPage('necessidades')">Ver Todas</a></li>
+        </ul>
+    </nav>
+
+     <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VoluntaConnect. Conectando corações e transformando vidas.</p>
+    </footer>
 </body>
 </html>
