@@ -41,3 +41,22 @@ let necessidades = [ {
 } ];
 
 let nextId = 4;
+
+// Função para mostrar páginas
+function showPage(pageId) {
+// Esconder todas as páginas
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
+            
+    // Mostrar página selecionada
+    document.getElementById(pageId).classList.add('active');
+            
+    // Atualizar navegação
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+    navLinks.forEach(link => link.classList.remove('active'));
+            
+    // Carregar necessidades se estiver na página de necessidades
+    if (pageId === 'necessidades') {
+        displayNeeds();
+    }
+}
