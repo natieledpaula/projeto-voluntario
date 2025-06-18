@@ -177,6 +177,31 @@ function limparEndereco() {
             successMessage.parentNode.removeChild(successMessage);
         }
     }, 3000);
-    
+
     console.log('Necessidades cadastradas:', necessidades);
 });
+
+// Exibir necessidades
+function displayNeeds(filteredNeeds = null) {
+    const container = document.getElementById('needsContainer');
+    const noResults = document.getElementById('noResults');
+    const needsToShow = filteredNeeds || necessidades;
+    if (needsToShow.length === 0) {
+        container.innerHTML = '';
+        noResults.style.display = 'block';
+        return;
+    }
+    noResults.style.display = 'none';
+
+    container.innerHTML = needsToShow.map(need => ` <div class="need-card">
+        <h3>${need.tituloNecessidade}</h3>
+        <div class="institution">${need.nomeInstituicao}</div>
+
+        <div class="type">${need.tipoAjuda}</div>
+        <div class="description">${need.descricao}</div>
+        <div class="contact">
+        <strong>Contato:</strong> ${need.email}${need.telefone ? ` | ${need.telefone}` : ''}</div>
+        <div class="location">
+        📍 ${need.rua ? need.rua + ', ' : ''}${need.bairro ? need.bairro + ', ' : ''}${need.cidade}/${need.estado} </div> </div>`
+    ).join('');
+}
