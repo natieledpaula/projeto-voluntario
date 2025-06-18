@@ -74,3 +74,17 @@ document.getElementById('cep').addEventListener('input', function(e) {
         buscarEndereco(cep.replace('-',''));
     }
 });
+
+// Formatação de telefone
+document.getElementById('telefone').addEventListener('input', function(e) {
+    let phone = e.target.value.replace(/\D/g, '');
+    
+    if (phone.length >= 2) {
+        phone = '(' + phone.substring(0, 2) + ') ' + phone.substring(2);
+    }
+
+    if (phone.length >= 10) {
+        phone = phone.substring(0, 10) + '-' + phone.substring(10, 14);
+    }
+    e.target.value = phone;
+});
