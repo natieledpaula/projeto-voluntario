@@ -60,3 +60,17 @@ function showPage(pageId) {
         displayNeeds();
     }
 }
+
+// Formatação de CEP
+document.getElementById('cep').addEventListener('input', function(e) {
+    let cep = e.target.value.replace(/\D/g, '');
+    if (cep.length >= 5) {
+    cep = cep.substring(0, 5) + '-' + cep.substring(5, 8);
+    }
+    e.target.value = cep;
+
+    // Buscar endereço quando CEP estiver completo
+    if (cep.length === 9) {
+        buscarEndereco(cep.replace('-',''));
+    }
+});
