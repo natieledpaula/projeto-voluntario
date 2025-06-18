@@ -217,3 +217,7 @@ function filterNeeds() {
     
     displayNeeds(filtered);
 }
+
+// Event listeners para pesquisa e filtro
+document.getElementById('searchInput').addEventListener('input', filterNeeds);
+document.getElementById('filterType').addEventListener('change', filterNeeds);
