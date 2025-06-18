@@ -110,3 +110,73 @@ async function buscarEndereco(cep) {
         limparEndereco();
     }
 }
+
+function limparEndereco() {
+    document.getElementById('rua').value = '';
+    document.getElementById('bairro').value = '';
+    document.getElementById('cidade').value = '';
+    document.getElementById('estado').value = '';
+}
+
+// Submissão do formulário
+    document.getElementById('necessidadeForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+            
+        // Validação básica
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+            
+        // Verificar campos obrigatórios
+        const requiredFields = ['nomeInstituicao', 'tipoAjuda', 'tituloNecessidade', 'descricao', 'cep', 'email'];
+        const emptyFields = requiredFields.filter(field => !data[field] || data[field].trim() === '');
+        
+        if (emptyFields.length > 0) {
+            alert('Por favor, preencha todos os campos obrigatórios marcados com *');
+            return;
+        }
+        
+        // Validar email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            alert('Por favor, insira um e-mail válido');
+            return;
+        }
+            
+        // Validar CEP
+        if (data.cep.replace(/\D/g, '').length !== 8) {
+            alert('Por favor, insira um CEP válido');
+            return;
+        }
+        
+        // Criar nova necessidade
+        const novaNecessidade = {
+            id: nextId++,
+            ...data,
+            rua: document.getElementById('rua').value,
+            bairro: document.getElementById('bairro').value,
+            cidade: document.getElementById('cidade').value,
+            estado: document.getElementById('estado').value
+        };
+        
+        // Adicionar ao array
+        necessidades.push(novaNecessidade);
+        
+        // Mostrar mensagem de sucesso
+        const successMessage = document.createElement('div');
+        successMessage.className = 'success-message';
+        successMessage.textContent = 'Necessidade cadastrada com sucesso!';
+        e.target.insertBefore(successMessage, e.target.firstChild);
+            
+        // Limpar formulário
+        e.target.reset();
+        limparEndereco();
+            
+        // Remover mensagem após 3 segundos
+        setTimeout(() => {
+            if (successMessage.parentNode) {
+            successMessage.parentNode.removeChild(successMessage);
+        }
+    }, 3000);
+    
+    console.log('Necessidades cadastradas:', necessidades);
+});
