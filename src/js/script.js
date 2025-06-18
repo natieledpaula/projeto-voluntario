@@ -205,3 +205,15 @@ function displayNeeds(filteredNeeds = null) {
         📍 ${need.rua ? need.rua + ', ' : ''}${need.bairro ? need.bairro + ', ' : ''}${need.cidade}/${need.estado} </div> </div>`
     ).join('');
 }
+
+function filterNeeds() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const filterType = document.getElementById('filterType').value;
+    let filtered = necessidades.filter(need => {
+        const matchesSearch = need.tituloNecessidade.toLowerCase().includes(searchTerm) || need.descricao.toLowerCase().includes(searchTerm) || need.nomeInstituicao.toLowerCase().includes(searchTerm);
+        const matchesType = !filterType || need.tipoAjuda === filterType;
+        return matchesSearch && matchesType;
+    });
+    
+    displayNeeds(filtered);
+}
