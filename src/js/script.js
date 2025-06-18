@@ -1,0 +1,43 @@
+  // Array para armazenar as necessidades
+let necessidades = [ {
+                id: 1,
+                nomeInstituicao: "Lar São Francisco",
+                tipoAjuda: "Educação",
+                tituloNecessidade: "Professores voluntários para reforço escolar",
+                descricao: "Precisamos de professores voluntários para ajudar crianças de 8 a 14 anos com reforço escolar em matemática e português. Horário: terças e quintas, das 14h às 16h.",
+                cep: "86020-010",
+                rua: "Rua Pará",
+                bairro: "Centro",
+                cidade: "Londrina",
+                estado: "PR",
+                email: "contato@larsaofrancisco.org.br",
+                telefone: "(43) 3322-1234"
+}, {
+                id: 2,
+                nomeInstituicao: "Instituto Verde Vida",
+                tipoAjuda: "Meio Ambiente",
+                tituloNecessidade: "Voluntários para plantio de árvores",
+                descricao: "Convocamos voluntários para participar do mutirão de plantio de árvores nativas no Parque Municipal. Fornecemos equipamentos e lanche. Sábados das 8h às 12h.",
+                cep: "86010-230",
+                rua: "Avenida Juscelino Kubitschek",
+                bairro: "Centro",
+                cidade: "Londrina",
+                estado: "PR",
+                email: "plantio@verdevida.org.br",
+                telefone: "(43) 3333-5678"
+}, {
+                id: 3,
+                nomeInstituicao: "Casa da Esperança",
+                tipoAjuda: "Doação de Alimentos",
+                tituloNecessidade: "Doação de alimentos não perecíveis",
+                descricao: "Arrecadamos alimentos não perecíveis para famílias em situação de vulnerabilidade. Aceitamos arroz, feijão, óleo, açúcar, leite em pó e outros itens básicos.",
+                cep: "86050-450",
+                rua: "Rua Sergipe",
+                bairro: "Zona Sul",
+                cidade: "Londrina",
+                estado: "PR",
+                email: "doacoes@casaesperanca.org.br",
+                telefone: "(43) 3344-9876"
+} ];
+
+let nextId = 4;
