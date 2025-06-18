@@ -221,3 +221,8 @@ function filterNeeds() {
 // Event listeners para pesquisa e filtro
 document.getElementById('searchInput').addEventListener('input', filterNeeds);
 document.getElementById('filterType').addEventListener('change', filterNeeds);
+
+// Inicializar a página
+document.addEventListener('DOMContentLoaded', function() {
+    showPage('home');
+});
