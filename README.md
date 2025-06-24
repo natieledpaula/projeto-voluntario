@@ -50,3 +50,67 @@ Muitas ONGs enfrentam dificuldades para captar e organizar a participação de v
 - CSS3 (com design responsivo)
 - JavaScript (ES6)
 - API ViaCEP (https://viacep.com.br/)
+
+---
+
+## 📸 Imagem de Prévia
+
+![alt text](img/image.png)
+![alt text](img/image2.png)
+![alt text](img/image3.png)
+![alt text](img/image4.png)
+![alt text](img/image5.png)
+![alt text](img/image6.png)
+
+---
+
+## 📸 Prévia do Projeto
+
+(https://natieledpaula.github.io/projeto-voluntario/)
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+projeto-voluntariado/
+├── index.html # Página inicial da plataforma, tela de cadastro e busca de oportunidades.
+├── img/
+|    └── preview.png # Imagem de pré-visualização.
+├── assets/
+|     ├── css/
+│          └── style.css # Estilos globais e responsividade.
+|     ├── js/
+│         └── script.js # Lógica do formulário, validação e API ViaCEP, lógica de busca, filtros e exibição dinâmica.
+└── README.md # Documentação do projeto
+```
+
+---
+
+## 🧠 Aprendizados
+
+Este projeto proporcionou aprendizados práticos em:
+
+- Lógica de formulários e manipulação do DOM com JavaScript
+- Consumo de APIs externas (ViaCEP)
+- Design responsivo com CSS puro
+- Armazenamento temporário em arrays (simulando um backend)
+- Criação de filtros e buscas funcionais sem bibliotecas externas
+
+---
+
+## 📜 Licença
+
+Este projeto está licenciado sob a **MIT License**.  
+Você pode utilizá-lo, adaptá-lo e distribuí-lo livremente, com os devidos créditos.
+
+---
+
+## 👩‍💻 Desenvolvido por
+
+**Natiele de Paula**  
+🔗 GitHub: [@natieledpaula](https://github.com/natieledpaula)
+
+---
+
+> “Conectar quem quer ajudar com quem precisa é uma ponte que a tecnologia pode construir.” 🌍💙
