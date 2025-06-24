@@ -79,9 +79,9 @@ projeto-voluntariado/
 |    └── preview.png # Imagem de pré-visualização.
 ├── assets/
 |     ├── css/
-│          └── style.css # Estilos globais e responsividade.
-|     ├── js/
-│         └── script.js # Lógica do formulário, validação e API ViaCEP, lógica de busca, filtros e exibição dinâmica.
+│     |     └── style.css # Estilos globais e responsividade.
+|     └── js/
+│          └── script.js # Lógica do formulário, validação e API ViaCEP, lógica de busca, filtros e exibição dinâmica.
 └── README.md # Documentação do projeto
 ```
 
